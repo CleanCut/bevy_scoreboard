@@ -1,7 +1,15 @@
 [package]
 name = "bevy_scoreboard"
-version = "0.1.0"
+version = "0.0.0"
 edition = "2021"
+description = "A very simple scoreboard plugin for Bevy"
+homepage = "https://github.com/CleanCut/bevy_scoreboard"
+repository = "https://github.com/CleanCut/bevy_scoreboard"
+readme = "README.md"
+keywords = [ "game", "score", "graphics", "plugin", "bevy" ]
+categories = [ "game-development" ]
+license = "MIT OR Apache-2.0"
+
 
 [dependencies]
 bevy = "0.14.1"
