@@ -83,21 +83,25 @@ struct ScoreboardText;
 
 fn setup(mut commands: Commands) {
     commands
-        .spawn(NodeBundle {
-            style: Style {
-                width: Val::Px(230.),
-                height: Val::Px(200.),
-                margin: UiRect::all(Val::Px(20.)),
-                align_items: AlignItems::Center,
-                justify_content: JustifyContent::Center,
+        .spawn((
+            Name::new("Scoreboard Background"),
+            NodeBundle {
+                style: Style {
+                    width: Val::Px(230.),
+                    height: Val::Px(200.),
+                    margin: UiRect::all(Val::Px(20.)),
+                    align_items: AlignItems::Center,
+                    justify_content: JustifyContent::Center,
+                    ..Default::default()
+                },
+                background_color: BackgroundColor::from(Color::srgba(0.0, 0.0, 0.0, 0.8)),
+                border_radius: BorderRadius::all(Val::Px(10.0)),
                 ..Default::default()
             },
-            background_color: BackgroundColor::from(Color::srgba(0.0, 0.0, 0.0, 0.8)),
-            border_radius: BorderRadius::all(Val::Px(10.0)),
-            ..Default::default()
-        })
+        ))
         .with_children(|builder| {
             builder.spawn((
+                Name::new("Scoreboard Text"),
                 TextBundle::from_section(
                     "Scores\n",
                     TextStyle {
