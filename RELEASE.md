@@ -18,13 +18,6 @@ Once that looks good, do the actual release.
 cargo release --execute LEVEL
 ```
 
-Then publish the tutorial for the new version.
-
-
-```shell
-script/publish_tutorial
-```
-
 # Configuration
 
 Configuration goes in `release.toml`

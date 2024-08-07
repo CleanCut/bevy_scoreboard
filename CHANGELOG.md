@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- Add `Name` components to the scoreboard background and scoreboard text so that things look better in `bevy-inspector-egui`
+
 ## [0.1.0] - 2024-08-06
 
 - Initial release
