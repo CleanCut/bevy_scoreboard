@@ -13,30 +13,22 @@ impl Plugin for ScoreboardPlugin {
 #[derive(Resource, Default)]
 pub struct Scoreboard {
     entries: Vec<ScoreboardEntry>,
-    player_numbers: HashSet<usize>,
+    player_ids: HashSet<usize>,
 }
 
 impl Scoreboard {
-    pub fn add_player(
-        &mut self,
-        player_number: usize,
-        player_name: impl Into<String>,
-        player_color: Color,
-    ) {
-        if self.player_numbers.contains(&player_number) {
-            error!(
-                "Player number {} already exists - NOT ADDING TO THE SCOREBOARD",
-                player_number
-            );
+    pub fn add_player(&mut self, id: usize, name: impl Into<String>, color: Color) {
+        if self.player_ids.contains(&id) {
+            error!("Player id {} already exists - NOT ADDING TO SCOREBOARD", id);
             return;
         }
-        self.player_numbers.insert(player_number);
-        let player_name: String = player_name.into();
+        self.player_ids.insert(id);
+        let player_name: String = name.into();
         self.entries.push(ScoreboardEntry {
             score: 0,
-            player_number,
-            player_name,
-            player_color,
+            id,
+            name: player_name,
+            color,
         });
         self.sort();
     }
@@ -44,12 +36,21 @@ impl Scoreboard {
     pub fn increment(&mut self, player_number: usize, amount: i32) {
         // Find & alter the existing entry (if it exists)
         for score_entry in &mut self.entries {
-            if score_entry.player_number == player_number {
+            if score_entry.id == player_number {
                 score_entry.score += amount;
                 break;
             }
         }
         self.sort();
+    }
+
+    pub fn get_score(&self, player_number: usize) -> i32 {
+        for score_entry in &self.entries {
+            if score_entry.id == player_number {
+                return score_entry.score;
+            }
+        }
+        0
     }
 
     // Sort the score entries by score
@@ -63,8 +64,8 @@ impl Scoreboard {
             .iter()
             .map(|score_entry| {
                 (
-                    format!("{} - {}\n", score_entry.score, score_entry.player_name),
-                    score_entry.player_color,
+                    format!("{} - {}\n", score_entry.score, score_entry.name),
+                    score_entry.color,
                 )
             })
             .collect()
@@ -73,9 +74,9 @@ impl Scoreboard {
 
 struct ScoreboardEntry {
     score: i32,
-    player_number: usize,
-    player_name: String,
-    player_color: Color,
+    id: usize,
+    name: String,
+    color: Color,
 }
 
 #[derive(Component)]
