@@ -10,4 +10,4 @@ See the [scoreboard example](./examples/scoreboard.rs) in the `examples` subdire
 
 |bevy_scoreboard version|Bevy version|
 |---|---|
-| 0.1 | 0.14 |
+| 0.1.x | 0.14 |

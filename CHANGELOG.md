@@ -1,6 +1,9 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- Add `Scoreboard::get_score` method
+- Improve naming of some internal things
+
 ## [0.1.1] - 2024-08-07
 
 - Add `Name` components to the scoreboard background and scoreboard text so that things look better in `bevy-inspector-egui`
