@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- More internal naming improvements
+
 ## [0.1.2] - 2024-08-30
 
 - Add `Scoreboard::get_score` method

@@ -33,10 +33,10 @@ impl Scoreboard {
         self.sort();
     }
 
-    pub fn increment(&mut self, player_number: usize, amount: i32) {
+    pub fn increment(&mut self, player_id: usize, amount: i32) {
         // Find & alter the existing entry (if it exists)
         for score_entry in &mut self.entries {
-            if score_entry.id == player_number {
+            if score_entry.id == player_id {
                 score_entry.score += amount;
                 break;
             }
@@ -44,9 +44,9 @@ impl Scoreboard {
         self.sort();
     }
 
-    pub fn get_score(&self, player_number: usize) -> i32 {
+    pub fn get_score(&self, player_id: usize) -> i32 {
         for score_entry in &self.entries {
-            if score_entry.id == player_number {
+            if score_entry.id == player_id {
                 return score_entry.score;
             }
         }
