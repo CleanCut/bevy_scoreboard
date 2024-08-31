@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+## [0.1.4] - 2024-08-31
+
 - Add `Scoreboard::set_score` to set scores
 - Add `Scoreboard::remove_player` to remove a player
 - Add `Scoreboard::reset_scores` to reset all the scores
@@ -24,7 +26,8 @@
 - Initial release
 
 <!-- next-url -->
-[Unreleased]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.0...v0.1.1
