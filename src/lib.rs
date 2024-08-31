@@ -33,6 +33,11 @@ impl Scoreboard {
         self.sort();
     }
 
+    pub fn remove_player(&mut self, id: usize) {
+        self.player_ids.remove(&id);
+        self.entries.retain(|entry| entry.id != id);
+    }
+
     pub fn increment(&mut self, player_id: usize, amount: i32) {
         // Find & alter the existing entry (if it exists)
         for score_entry in &mut self.entries {
@@ -51,6 +56,25 @@ impl Scoreboard {
             }
         }
         0
+    }
+
+    pub fn set_score(&mut self, player_id: usize, score: i32) {
+        for score_entry in &mut self.entries {
+            if score_entry.id == player_id {
+                score_entry.score = score;
+            }
+        }
+    }
+
+    pub fn reset_scores(&mut self) {
+        for score_entry in &mut self.entries {
+            score_entry.score = 0;
+        }
+    }
+
+    pub fn clear(&mut self) {
+        self.entries.clear();
+        self.player_ids.clear();
     }
 
     // Sort the score entries by score
