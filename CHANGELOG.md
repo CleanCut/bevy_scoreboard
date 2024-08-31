@@ -1,6 +1,11 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- Add `Scoreboard::set_score` to set scores
+- Add `Scoreboard::remove_player` to remove a player
+- Add `Scoreboard::reset_scores` to reset all the scores
+- Add `Scoreboard::clear` to clear the whole scoreboard
+
 ## [0.1.3] - 2024-08-30
 
 - More internal naming improvements
