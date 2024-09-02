@@ -1,6 +1,6 @@
 [package]
 name = "bevy_scoreboard"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 description = "A very simple scoreboard plugin for Bevy"
 homepage = "https://github.com/CleanCut/bevy_scoreboard"
