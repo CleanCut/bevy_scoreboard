@@ -1,5 +1,9 @@
 use bevy::{prelude::*, utils::HashSet};
 
+pub mod prelude {
+    pub use crate::{Scoreboard, ScoreboardPlugin};
+}
+
 pub struct ScoreboardPlugin;
 
 impl Plugin for ScoreboardPlugin {

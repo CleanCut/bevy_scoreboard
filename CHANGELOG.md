@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- Add a `prelude` module containing all the public things.
+
 ## [0.1.4] - 2024-08-31
 
 - Add `Scoreboard::set_score` to set scores
