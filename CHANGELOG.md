@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+## [0.1.6] - 2024-09-06
+
 - Add `Scoreboard::high_score` to return the highest score
 
 ## [0.1.5] - 2024-09-02
@@ -32,7 +34,8 @@
 - Initial release
 
 <!-- next-url -->
-[Unreleased]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.5...HEAD
+[Unreleased]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.6...HEAD
+[0.1.6]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.2...v0.1.3
