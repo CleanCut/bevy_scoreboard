@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- Add `Scoreboard::high_score` to return the highest score
+
 ## [0.1.5] - 2024-09-02
 
 - Add a `prelude` module containing all the public things.

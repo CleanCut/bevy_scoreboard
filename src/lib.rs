@@ -62,6 +62,10 @@ impl Scoreboard {
         0
     }
 
+    pub fn high_score(&self) -> i32 {
+        (self.entries.iter().max_by(|x, y| x.score.cmp(&y.score)).unwrap()).score
+    }
+
     pub fn set_score(&mut self, player_id: usize, score: i32) {
         for score_entry in &mut self.entries {
             if score_entry.id == player_id {
