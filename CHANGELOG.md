@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- Fix `Scoreboard::high_score` to not crash when there are no entries on the scoreboard.
+
 ## [0.1.6] - 2024-09-06
 
 - Add `Scoreboard::high_score` to return the highest score
