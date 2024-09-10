@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+## [0.1.8] - 2024-09-10
+
 - Add a winning screen (originally implemented in `bevy_cleancut`). Adds `Scoreboard::show_winner_screen`, which copies the sprite from an entity, displays it as the winner with the game's virtual game paused for a few seconds, and then resumes virtual time.
 
 ## [0.1.7] - 2024-09-06
@@ -40,7 +42,8 @@
 - Initial release
 
 <!-- next-url -->
-[Unreleased]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.7...HEAD
+[Unreleased]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.8...HEAD
+[0.1.8]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.7...v0.1.8
 [0.1.7]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.5...v0.1.6
 [0.1.5]: https://github.com/CleanCut/bevy_scoreboard/compare/v0.1.4...v0.1.5
