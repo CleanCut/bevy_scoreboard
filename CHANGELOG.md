@@ -1,6 +1,8 @@
 <!-- next-header -->
 ## [Unreleased] - ReleaseDate
 
+- Add a winning screen (originally implemented in `bevy_cleancut`). Adds `Scoreboard::show_winner_screen`, which copies the sprite from an entity, displays it as the winner with the game's virtual game paused for a few seconds, and then resumes virtual time.
+
 ## [0.1.7] - 2024-09-06
 
 - Fix `Scoreboard::high_score` to not crash when there are no entries on the scoreboard.
