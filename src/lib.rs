@@ -1,6 +1,8 @@
-use bevy::{prelude::*, utils::HashSet,
+use bevy::{
     asset::embedded_asset,
+    prelude::*,
     sprite::{MaterialMesh2dBundle, Mesh2dHandle},
+    utils::HashSet,
 };
 pub mod prelude {
     pub use crate::{Scoreboard, ScoreboardPlugin};
@@ -13,7 +15,7 @@ impl Plugin for ScoreboardPlugin {
         app.init_resource::<Scoreboard>()
             .init_state::<WinState>()
             .add_systems(Startup, setup)
-            .add_systems(Update, update)    
+            .add_systems(Update, update)
             // So that any entities created by these systems are automatically despawned after leaving
             // the WinState.
             .enable_state_scoped_entities::<WinState>()
@@ -32,8 +34,6 @@ pub struct Scoreboard {
     winner_entity: Option<Entity>,
     winner_timer: Timer,
 }
-
-
 
 impl Scoreboard {
     pub fn add_player(&mut self, id: usize, name: impl Into<String>, color: Color) {
@@ -205,17 +205,12 @@ fn update(
     }
 }
 
-
-
-
-
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Hash, States)]
 enum WinState {
     #[default]
     Detecting,
     Displaying,
 }
-
 
 #[allow(clippy::too_many_arguments)]
 fn detect_win(
